@@ -1,0 +1,286 @@
+[
+  {
+    "label": "Tulsi (holy basil)",
+    "terms": [
+      "tulsi",
+      "tulasi",
+      "surasa",
+      "holy basil"
+    ],
+    "latin": "Ocimum sanctum"
+  },
+  {
+    "label": "Neem",
+    "terms": [
+      "neem",
+      "nimba",
+      "margosa"
+    ],
+    "latin": "Azadirachta indica"
+  },
+  {
+    "label": "Turmeric",
+    "terms": [
+      "turmeric",
+      "haridra"
+    ],
+    "latin": "Curcuma longa"
+  },
+  {
+    "label": "Ginger",
+    "terms": [
+      "ginger",
+      "ardraka",
+      "shringavera",
+      "shunthi"
+    ],
+    "latin": "Zingiber officinale"
+  },
+  {
+    "label": "Long pepper",
+    "terms": [
+      "long pepper",
+      "pippali"
+    ],
+    "latin": "Piper longum"
+  },
+  {
+    "label": "Black pepper",
+    "terms": [
+      "black pepper",
+      "maricha"
+    ],
+    "latin": "Piper nigrum"
+  },
+  {
+    "label": "Triphala",
+    "terms": [
+      "triphala",
+      "haritaki",
+      "vibhitaka",
+      "bibhitaka",
+      "amalaka"
+    ],
+    "latin": "three myrobalans"
+  },
+  {
+    "label": "Amla (Indian gooseberry)",
+    "terms": [
+      "amla",
+      "amalaki",
+      "amalaka",
+      "indian gooseberry"
+    ],
+    "latin": "Emblica officinalis"
+  },
+  {
+    "label": "Haritaki (chebulic myrobalan)",
+    "terms": [
+      "haritaki",
+      "chebulic myrobalan",
+      "myrobalan"
+    ],
+    "latin": "Terminalia chebula"
+  },
+  {
+    "label": "Garlic",
+    "terms": [
+      "garlic",
+      "lasuna",
+      "rasona"
+    ],
+    "latin": "Allium sativum"
+  },
+  {
+    "label": "Ghee",
+    "terms": [
+      "ghee",
+      "ghrita",
+      "clarified butter"
+    ]
+  },
+  {
+    "label": "Sesame",
+    "terms": [
+      "sesame",
+      "sesamum",
+      "tila"
+    ],
+    "latin": "Sesamum indicum"
+  },
+  {
+    "label": "Guduchi (giloy)",
+    "terms": [
+      "guduchi",
+      "giloy"
+    ],
+    "latin": "Tinospora cordifolia"
+  },
+  {
+    "label": "Ashwagandha",
+    "terms": [
+      "ashwagandha",
+      "ashvagandha",
+      "winter cherry"
+    ],
+    "latin": "Withania somnifera"
+  },
+  {
+    "label": "Cardamom",
+    "terms": [
+      "cardamom",
+      "ela",
+      "elaichi"
+    ],
+    "latin": "Elettaria cardamomum"
+  },
+  {
+    "label": "Sandalwood",
+    "terms": [
+      "sandalwood",
+      "chandana"
+    ],
+    "latin": "Santalum album"
+  },
+  {
+    "label": "Cumin",
+    "terms": [
+      "cumin",
+      "jiraka"
+    ],
+    "latin": "Cuminum cyminum"
+  },
+  {
+    "label": "Coriander",
+    "terms": [
+      "coriander",
+      "dhanyaka"
+    ],
+    "latin": "Coriandrum sativum"
+  },
+  {
+    "label": "Mustard",
+    "terms": [
+      "mustard",
+      "sarshapa"
+    ]
+  },
+  {
+    "label": "Barley",
+    "terms": [
+      "barley",
+      "yava"
+    ],
+    "latin": "Hordeum vulgare"
+  },
+  {
+    "label": "Rice",
+    "terms": [
+      "rice",
+      "shali",
+      "vrihi"
+    ]
+  },
+  {
+    "label": "Rock salt",
+    "terms": [
+      "rock salt",
+      "saindhava"
+    ]
+  },
+  {
+    "label": "Vata (wind)",
+    "terms": [
+      "vata",
+      "vayu",
+      "wind"
+    ]
+  },
+  {
+    "label": "Pitta (bile)",
+    "terms": [
+      "pitta",
+      "bile"
+    ]
+  },
+  {
+    "label": "Kapha (phlegm)",
+    "terms": [
+      "kapha",
+      "kapham",
+      "phlegm",
+      "shleshma"
+    ]
+  },
+  {
+    "label": "Fever",
+    "terms": [
+      "fever",
+      "jvara"
+    ]
+  },
+  {
+    "label": "Ulcer, wound or boil",
+    "terms": [
+      "boil",
+      "ulcer",
+      "wound",
+      "vrana"
+    ]
+  },
+  {
+    "label": "Swelling",
+    "terms": [
+      "swelling",
+      "inflammation",
+      "shotha"
+    ]
+  },
+  {
+    "label": "Diabetes and urinary disorders",
+    "terms": [
+      "diabetes",
+      "prameha"
+    ]
+  },
+  {
+    "label": "Skin disease (leprosy)",
+    "terms": [
+      "leprosy",
+      "kushtha",
+      "skin disease"
+    ]
+  },
+  {
+    "label": "Piles",
+    "terms": [
+      "piles",
+      "haemorrhoids",
+      "hemorrhoids",
+      "arsha"
+    ]
+  },
+  {
+    "label": "Cough",
+    "terms": [
+      "cough",
+      "kasa"
+    ]
+  },
+  {
+    "label": "Jaundice",
+    "terms": [
+      "jaundice",
+      "kamala"
+    ]
+  },
+  {
+    "label": "Diarrhoea and dysentery",
+    "terms": [
+      "diarrhoea",
+      "diarrhea",
+      "dysentery",
+      "atisara"
+    ]
+  }
+]

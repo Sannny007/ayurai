@@ -14,4 +14,4 @@ const MessageBubble = ({ message }) => {
   return <AssistantMessage message={message} />
 }
 
-export default MessageBubble
+export default MessageBubble;

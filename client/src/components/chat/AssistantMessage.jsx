@@ -4,6 +4,7 @@ import PramanaCard from './PramanaCard'
 
 const AssistantMessage = ({ message }) => {
   const citations = message.citations ?? []
+  const understood = message.understood ?? []
 
   return (
     <div className="flex gap-3">
@@ -11,6 +12,19 @@ const AssistantMessage = ({ message }) => {
       <div className="min-w-0 max-w-[85%] flex-1 space-y-3">
         {citations.length > 0 ? (
           <>
+            {understood.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {understood.map((u) => (
+                  <span
+                    key={u.label}
+                    className="rounded-full border border-leaf/40 bg-leaf/10 px-3 py-1 text-xs text-parchment/70"
+                  >
+                    <span className="font-semibold text-leaf">Glossary</span> · {u.label} → {u.terms.join(', ')}
+                  </span>
+                ))}
+              </div>
+            )}
+
             <section className="rounded-2xl border border-gold/10 bg-forest/70 px-4 py-3">
               <p className="mb-1 text-[11px] font-semibold uppercase tracking-widest text-leaf">
                 Vyākhyā
