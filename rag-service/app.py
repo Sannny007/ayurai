@@ -3,7 +3,7 @@ import json
 import re
 
 import numpy as np
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastembed import TextEmbedding
 from pydantic import BaseModel
 from rank_bm25 import BM25Okapi
@@ -11,6 +11,7 @@ from rank_bm25 import BM25Okapi
 MODEL = "BAAI/bge-small-en-v1.5"
 MIN_SCORE = 0.60  # best meaning-match below this => question is not covered by the text
 POOL = 30         # candidates taken from each ranking before merging
+SOURCE = "Sushruta Samhita, Sutrasthanam (tr. Bhishagratna, 1907)"
 
 STOP = set(
     "the of and to in a is that it as with for by be or are this which on from at an his not have one "
@@ -20,6 +21,7 @@ STOP = set(
 chunks = json.loads(Path("data/chunks.json").read_text(encoding="utf-8"))
 vectors = np.load("data/embeddings.npy")
 synonyms = json.loads(Path("synonyms.json").read_text(encoding="utf-8"))
+chapters_data = json.loads(Path("data/chapters.json").read_text(encoding="utf-8"))
 model = TextEmbedding(MODEL)
 
 
@@ -80,7 +82,7 @@ def search(req: SearchRequest):
     passages = [
         {
             "id": chunks[i]["id"],
-            "source": "Sushruta Samhita, Sutrasthanam (tr. Bhishagratna, 1907)",
+            "source": SOURCE,
             "chapter": chunks[i]["chapter"],
             "score": round(float(dense_scores[i]), 3),
             "text": chunks[i]["text"],
@@ -92,3 +94,23 @@ def search(req: SearchRequest):
         "matched": [{"label": g["label"], "terms": g["terms"]} for g in matched],
         "passages": passages,
     }
+
+
+@app.get("/chapters")
+def list_chapters():
+    return [
+        {
+            "chapter": c["chapter"],
+            "preview": (c["paragraphs"][0] if c["paragraphs"] else "")[:160],
+            "paragraphs": len(c["paragraphs"]),
+        }
+        for c in chapters_data
+    ]
+
+
+@app.get("/chapters/{number}")
+def get_chapter(number: int):
+    for c in chapters_data:
+        if c["chapter"] == number:
+            return {"chapter": number, "source": SOURCE, "paragraphs": c["paragraphs"]}
+    raise HTTPException(status_code=404, detail="Chapter not found")
