@@ -1,9 +1,9 @@
 import AppLayout from './components/layouts/AppLayout'
-import WelcomePanel from './components/chat/WelcomePanel'
+import ChatPage from './components/chat/ChatPage'
 
 const App = () => (
   <AppLayout>
-    <WelcomePanel />
+    <ChatPage />
   </AppLayout>
 )
 
