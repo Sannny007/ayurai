@@ -12,23 +12,9 @@ const TextsPage = ({ openChapter }) => {
 
   useEffect(() => {
     getChapters()
-    .then(setChapters)
-    .catch(() => setError('Could not load the chapter list.'))
+      .then(setChapters)
+      .catch(() => setError('Could not load the chapter list.'))
   }, []);
-
-
-  useEffect(() => {
-    if (openChapter) openChapter && loadChapter(openChapter)
-  }, [openChapter])
-
-  useEffect(() => {
-    if (openChapter) loadChapter(openChapter)
-  }, [openChapter])
-
-  useEffect(() => {
-    readerRef.current?.scrollTo(0, 0)
-  }, [content]);
-
 
   const loadChapter = async (number) => {
     setSelected(number)
@@ -42,6 +28,16 @@ const TextsPage = ({ openChapter }) => {
       setloading(false)
     }
   }
+
+  useEffect(() => {
+    if (openChapter == null) return
+    const timer = setTimeout(() => loadChapter(openChapter), 0)
+    return () => clearTimeout(timer)
+  }, [openChapter])
+
+  useEffect(() => {
+    readerRef.current?.scrollTo(0, 0)
+  }, [content]);
 
   return (
     <div className="flex min-h-0 flex-1 gap-4">
