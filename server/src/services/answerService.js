@@ -1,7 +1,7 @@
 const NOT_FOUND_MESSAGE =
   "I couldn't find this in the classical text I have indexed (Sushruta Samhita, Sutrasthanam), so I won't guess."
 
-const SYSTEM_PROMPT = `You are AyurAI, an assistant that answers strictly from passages of a classical Ayurvedic text.
+const SYSTEM_PROMPT = `You are AyurMeta, an assistant that answers strictly from passages of a classical Ayurvedic text.
 
 Rules:
 - Use ONLY the numbered passages provided. Never use outside knowledge.

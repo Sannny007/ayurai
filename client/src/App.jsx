@@ -4,7 +4,7 @@ import ChatPage from './components/chat/ChatPage'
 import TextsPage from './components/texts/TextsPage'
 
 const TITLES = {
-  chat: 'Ask AyurAI',
+  chat: 'Ask AyurMeta',
   texts: 'Classical Texts',
   plants: 'Plant ID',
   ip: 'IP Guidance',

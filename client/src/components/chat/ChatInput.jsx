@@ -39,7 +39,7 @@ const ChatInput = ({ onSend, disabled }) => {
       </button>
       </div>
 
-      <p className="mt-2 text-center text-xs text-parchment/40">AyurAI shares educational references from classical texts, not medical advice.</p>
+      <p className="mt-2 text-center text-xs text-parchment/40">AyurMeta shares educational references from classical texts, not medical advice.</p>
     </div>
   )
 }

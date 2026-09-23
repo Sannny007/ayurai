@@ -53,7 +53,7 @@ def merge_rankings(rankings, k=60):
     return sorted(scores, key=scores.get, reverse=True)
 
 
-app = FastAPI(title="AyurAI RAG service")
+app = FastAPI(title="AyurMeta RAG service")
 
 
 class SearchRequest(BaseModel):

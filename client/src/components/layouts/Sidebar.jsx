@@ -2,7 +2,7 @@ import { MessageSquare, BookOpen, Leaf, Scale, Plus } from 'lucide-react'
 import Sprig from '../botanical/Sprig'
 
 const navItems = [
-  { id: 'chat', label: 'Ask AyurAI', icon: MessageSquare },
+  { id: 'chat', label: 'Ask AyurMeta', icon: MessageSquare },
   { id: 'texts', label: 'Classical Texts', icon: BookOpen },
   { id: 'plants', label: 'Plant ID', icon: Leaf },
   { id: 'ip', label: 'IP Guidance', icon: Scale },
@@ -12,7 +12,7 @@ const Sidebar = ({ active, onSelect, onNewChat }) => (
   <aside className="flex w-64 shrink-0 flex-col border-r border-gold/10 bg-forest/60 p-4">
     <div className="mb-6 flex items-center gap-2 px-2">
       <Leaf className="text-gold" size={22} />
-      <span className="font-display text-2xl font-bold text-gold">AyurAI</span>
+      <span className="font-display text-2xl font-bold text-gold">AyurMeta</span>
     </div>
 
     <button

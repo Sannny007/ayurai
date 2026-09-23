@@ -14,4 +14,4 @@ app.get('/api/health', (req, res) => res.json({ status: 'ok' }))
 app.use('/api/chat', chatRouter)
 app.use('/api/texts', textsRouter)
 
-app.listen(PORT, () => console.log(`AyurAI API running on http://localhost:${PORT}`))
+app.listen(PORT, () => console.log(`AyurMeta API running on http://localhost:${PORT}`))
