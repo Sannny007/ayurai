@@ -5,7 +5,7 @@ import ThinkingIndicator from './ThinkingIndicator'
 import ChatInput from './ChatInput'
 import { sendMessage } from '../../api/chatapi'
 
-const ChatPage = () => {
+const ChatPage = ({ onOpenChapter }) => {
   const [messages, setMessages] = useState([])
   const [isThinking, setIsThinking] = useState(false)
   const bottomRef = useRef(null)
@@ -43,7 +43,7 @@ const ChatPage = () => {
         <div className="flex-1 overflow-y-auto">
           <div className="mx-auto flex max-w-3xl flex-col gap-4 py-4">
             {messages.map((m) => (
-              <MessageBubble key={m.id} message={m} />
+              <MessageBubble key={m.id} message={m} onOpenChapter={onOpenChapter} />
             ))}
             {isThinking && <ThinkingIndicator />}
             <div ref={bottomRef} />

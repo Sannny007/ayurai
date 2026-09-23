@@ -1,6 +1,6 @@
 import AssistantMessage from './AssistantMessage'
 
-const MessageBubble = ({ message }) => {
+const MessageBubble = ({ message, onOpenChapter }) => {
   if (message.role === 'user') {
     return (
       <div className="flex justify-end">
@@ -11,7 +11,7 @@ const MessageBubble = ({ message }) => {
     )
   }
 
-  return <AssistantMessage message={message} />
+  return <AssistantMessage message={message} onOpenChapter={onOpenChapter} />
 }
 
-export default MessageBubble;
+export default MessageBubble

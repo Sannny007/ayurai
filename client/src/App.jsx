@@ -22,18 +22,29 @@ const ComingSoon = ({ title }) => (
 const App = () => {
   const [view, setView] = useState('chat')
   const [chatKey, setChatKey] = useState(0)
+  const [openChapter, setOpenChapter] = useState(null)
 
   const handleNewChat = () => {
     setChatKey((k) => k + 1)
     setView('chat')
   }
 
+  const handleSelect = (id) => {
+    if (id !== 'texts') setOpenChapter(null)
+    setView(id)
+  }
+
+  const goToChapter = (number) => {
+    setOpenChapter(number)
+    setView('texts')
+  }
+
   return (
-    <AppLayout title={TITLES[view]} active={view} onSelect={setView} onNewChat={handleNewChat}>
+    <AppLayout title={TITLES[view]} active={view} onSelect={handleSelect} onNewChat={handleNewChat}>
       <div className={view === 'chat' ? 'flex min-h-0 flex-1 flex-col' : 'hidden'}>
-        <ChatPage key={chatKey} />
+        <ChatPage key={chatKey} onOpenChapter={goToChapter} />
       </div>
-      {view === 'texts' && <TextsPage />}
+      {view === 'texts' && <TextsPage openChapter={openChapter} />}
       {(view === 'plants' || view === 'ip') && <ComingSoon title={TITLES[view]} />}
     </AppLayout>
   )

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { getChapters, getChapter } from "../../api/textsApi";
 import Sprig from '../botanical/Sprig';
 
-const TextsPage = () => {
+const TextsPage = ({ openChapter }) => {
   const [chapters, setChapters] = useState([]);
   const [selected, setSelected] = useState(null);
   const [content, setContent] = useState(null);
@@ -16,12 +16,21 @@ const TextsPage = () => {
     .catch(() => setError('Could not load the chapter list.'))
   }, []);
 
+
+  useEffect(() => {
+    if (openChapter) openChapter && loadChapter(openChapter)
+  }, [openChapter])
+
+  useEffect(() => {
+    if (openChapter) loadChapter(openChapter)
+  }, [openChapter])
+
   useEffect(() => {
     readerRef.current?.scrollTo(0, 0)
   }, [content]);
 
 
-  const openChapter = async (number) => {
+  const loadChapter = async (number) => {
     setSelected(number)
     setloading(true)
     setError('')
@@ -43,7 +52,7 @@ const TextsPage = () => {
       {chapters.map((c) => (
         <button
         key={c.chapter}
-        onClick={() => openChapter(c.chapter)}
+        onClick={() => loadChapter(c.chapter)}
         className={`block w-full rounded-lg px-3 py-2 text-left transition ${selected === c.chapter ? 'bg-gold/10' : 'hover:bg-white/5'}`}
         >
           <span className="text-sm font-semibold text-gold">Chapter {c.chapter}</span>

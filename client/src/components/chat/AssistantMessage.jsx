@@ -2,7 +2,7 @@ import AssistantAvatar from './AssistantAvatar'
 import AnswerText from './AnswerText'
 import PramanaCard from './PramanaCard'
 
-const AssistantMessage = ({ message }) => {
+const AssistantMessage = ({ message, onOpenChapter }) => {
   const citations = message.citations ?? []
   const understood = message.understood ?? []
 
@@ -46,7 +46,7 @@ const AssistantMessage = ({ message }) => {
               </p>
               <div className="space-y-2">
                 {citations.map((c) => (
-                  <PramanaCard key={c.id} citation={c} />
+                  <PramanaCard key={c.id} citation={c} onOpenChapter={onOpenChapter} />
                 ))}
               </div>
               <p className="mt-2 text-[11px] text-parchment/40">
